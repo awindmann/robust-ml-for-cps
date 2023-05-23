@@ -1,0 +1,11 @@
+venv
+__pycache__/
+/data/*/*
+!.gitkeep
+*.ckpt
+*.pdf
+.idea
+.vscode
+poetry.toml
+
+logs

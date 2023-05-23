@@ -1,0 +1,41 @@
+[tool.poetry]
+name = "robust-ml-for-cps"
+version = "0.1.0"
+description = ""
+authors = ["Your Name <you@example.com>"]
+readme = "README.md"
+packages = [{include = "robust_ml_for_cps"}]
+
+[tool.poetry.dependencies]
+python = ">=3.9,<3.12"
+torch = {version = "1.13.1+cu117", source = "torch-source"}
+ipython = "^8.13.2"
+torchinfo = "^1.7.2"
+pytorch-lightning = "^2.0.2"
+setuptools = "^67.7.2"
+pandas = "^2.0.1"
+scipy = "^1.10.1"
+plotly = "^5.14.1"
+tensorboard = "^2.13.0"
+jupyterlab = "^3.6.3"
+kaleido = "0.2.1"
+
+
+[[tool.poetry.source]]
+name = "torch-source"
+url = "https://download.pytorch.org/whl/cu117"
+default = false
+secondary = true
+
+
+[tool.poetry.group.dev.dependencies]
+ipdb = "^0.13.13"
+pdbpp = "^0.10.3"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.pyright]
+venvPath = "."
+venv = ".venv"
